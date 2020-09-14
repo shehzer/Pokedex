@@ -1,22 +1,33 @@
+
 function validation() {
-   
       var name = document.getElementById("pokiName").value;
-      var number = document.getElementById("Number").value;
       var errorMsg = document.getElementById("error_message");
       var text;
       errorMsg.style.padding = "10px";
       if(name.length > 20 || !name.match(/^[A-Za-z]+$/)){
+          console.log("checked")
           text = "Please Enter Valid Name";
           errorMsg.innerHTML = text;
           return false;
       }
-      if(isNaN(number) || number >20 || number <1 ){
-          text = "Please Enter Valid PokiID";
-          errorMsg.innerHTML = text;
-      }
-      alert("Searching...");
-      return false;
+     
+     // alert("Searching...");
+      //return false;
     }
+
+function validation_Number(){
+    var number = document.getElementById("Number").value;
+    var errorMsg = document.getElementById("error_message");
+    var text;
+    errorMsg.style.padding = "10px";
+        if(isNaN(number) || number >20 || number <1 ){
+            text = "Please Enter Valid PokiID";
+            errorMsg.innerHTML = text;
+            }
+        //alert("Searching Function 2");
+        //return false;
+    }
+
     
 
 

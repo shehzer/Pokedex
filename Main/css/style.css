@@ -20,11 +20,7 @@ br:after{
     border:none;
     margin-left: 45%;
     margin-top: none;
-    letter-spacing: 2px;
-    ;
-    
-    
-    
+    letter-spacing: 2px;  
 }
 .button:hover{
     background:red;
@@ -40,8 +36,7 @@ br:after{
    /* border: 5px black solid;*/
    border-width: 1px 0 0 0;
     width: 100%;
-    
-    
+      
 }
 .my-form{
     padding: 10px;
@@ -51,14 +46,16 @@ br:after{
     padding-bottom: 5px;
     padding-right: 1px;
     /*background-color: blue;*/
-
 }
 .form-prompt{
     display: block;
     background-color: seagreen;
-    margin: 10% 20% 0% 20%;
+    margin: 0% 10% 0% 10%;
     padding-left: 105px;
     border-radius: 40px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: justify;
 }
 .form-prompt:hover{
     background: darkgreen;
@@ -69,12 +66,16 @@ br:after{
     margin:auto;  
 }
 .form-name{
+    margin-top: 25px;
+    margin-left: 30px;
     float: left;
     padding-left: 10%;
 }
 .form-number{
     float: right;
-    padding-right: 10%;
+    padding-right: 15%;
+    margin-top: 10px;
+    
 }
 .container #error_message{
     margin-bottom: 20px;
