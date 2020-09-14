@@ -2,20 +2,24 @@
 <html>
 <head>
         <title> Pokidex </title>
-        <link rel = "stylesheet" type = "text/css" href = "css/style.css">>
+        <link rel = "stylesheet" type = "text/css" href = "css/style.css">
+        <script src="script.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <h1> Pokédex</h1>
-    <div class = "search">
-        <form class="my-form">
+    <div class = "container">
+        <div id ="error_message"></div>
+        <form class="my-form" id="myForm" onsubmit="return validation()">
             <div class = "form-name">
                 <label>Name:</label>
-                <input type = "text" name = "pokiName" placeholder="Enter Name"> 
+                <input type = "text" id="pokiName" placeholder="Enter Name"> 
             </div>
             
             <div class = "form-number">
                 <label> Number: </label>
-                <input type = "text" name = "number" placeholder="Enter a number">
+                <input type = "text"  id = "Number" placeholder="Enter a number">
             </div>
 
             <div class = "form-prompt">
@@ -25,12 +29,140 @@
             </div>
             
             <div>
-                <input class ="button" type = "submit" value = "Search" name="">
+               <input class ="button" type = "submit" value = "Search" onclick="validation()">
             </div>
-                
-           
-        </form>
+                 
+        </form>   
     </div>
+
+    <div class = Pokedex>
+        <li class = "card">
+            <img class="card-image" src = "Images/1.png"/>
+            <h2 class ="card-title">001 Bulbasaur</h2>
+            <p class = "card-type" >Grass</p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/2.png"/>
+            <h2 class ="card-title">002 Ivysaur</h2>
+            <p class = "card-type" >Grass  Poison </p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/3.png"/>
+            <h2 class ="card-title">003 Venusaur</h2>
+            <p class = "card-type" >Grass  Poison </p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/4.png"/>
+            <h2 class ="card-title">004 Charmander</h2>
+            <p class = "card-type" >Fire </p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/5.png"/>
+            <h2 class ="card-title">005 Charmeleon</h2>
+            <p class = "card-type" >Fire </p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/6.png"/>
+            <h2 class ="card-title">006 Charizard</h2>
+            <p class = "card-type" >Fire </p>
+        </li>
+        
+        <li class = "card">
+            <img src = "Images/7.png"/>
+            <h2 class ="card-title">007 Squirtle</h2>
+            <p class = "card-type" >Water </p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/8.png"/>
+            <h2 class ="card-title">008 Wartortle</h2>
+            <p class = "card-type" >Water </p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/9.png"/>
+            <h2 class ="card-title">009 Blastoise</h2>
+            <p class = "card-type" >Water </p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/10.png"/>
+            <h2 class ="card-title">010 Caterpie</h2>
+            <p class = "card-type" >Bug </p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/11.png"/>
+            <h2 class ="card-title">011 Metapod</h2>
+            <p class = "card-type" >Bug </p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/12.png"/>
+            <h2 class ="card-title">012 Butterfree</h2>
+            <p class = "card-type" >Bug Flying </p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/13.png"/>
+            <h2 class ="card-title">013 Weedle</h2>
+            <p class = "card-type" >Bug </p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/14.png"/>
+            <h2 class ="card-title">014 Kakuna</h2>
+            <p class = "card-type" >Bug </p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/15.png"/>
+            <h2 class ="card-title">015 Beedrill</h2>
+            <p class = "card-type" >Bug </p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/16.png"/>
+            <h2 class ="card-title">016 Pidgey</h2>
+            <p class = "card-type" >Normal </p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/17.png"/>
+            <h2 class ="card-title">017 Pidgeotto</h2>
+            <p class = "card-type" >Normal </p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/18.png"/>
+            <h2 class ="card-title">018 Pidgeot</h2>
+            <p class = "card-type" >Normal </p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/19.png"/>
+            <h2 class ="card-title">019 Rattata</h2>
+            <p class = "card-type" >Normal </p>
+        </li>
+
+        <li class = "card">
+            <img src = "Images/20.png"/>
+            <h2 class ="card-title">020 Raticate</h2>
+            <p class = "card-type" >Normal </p>
+        </li>
+
+
+
+
+
+
+    </div>
+
 
 
 
