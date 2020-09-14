@@ -5,10 +5,37 @@ function validation() {
       var text;
       errorMsg.style.padding = "10px";
       if(name.length > 20 || !name.match(/^[A-Za-z]+$/)){
-          console.log("checked")
+          console.log("checked");
           text = "Please Enter Valid Name";
           errorMsg.innerHTML = text;
           return false;
+      }
+      else{
+          if(name == "Bulbasaur" || name== "bulbasaur" || name== "BULBASAUR"){
+              console.log("checked2");
+              alert("Name: Bulbasaur \n" + " Type: Grass Poison");
+          }
+
+          if(name == "Ivysaur" || name== "IVYSAUR"|| name =="ivysaur"){
+              console.log("checked3");
+              alert("Name: Ivysaur\n" + "Type: Grass Poison");
+          }
+
+          if(name == "Venusaur" || name== "VENUSAUR"|| name =="venusaur"){
+            console.log("checked4");
+            alert("Name: Venusaur\n" + "Type: Grass Poison");
+        }
+        
+        if(name == "Charmander" || name== "CHARMANDER"|| name=="charmander"){
+            console.log("checked5");
+            alert("Name: Charmander\n" + "Type: Fire");
+        }
+        
+        if(name == "Charmeleon" || name== "CHARMELEON"|| name=="charmeleon"){
+            console.log("checked6");
+            alert("Name: Charmeleon\n" + "Type: Fire");
+        }
+        
       }
      
      // alert("Searching...");
@@ -24,9 +51,32 @@ function validation_Number(){
             text = "Please Enter Valid PokiID";
             errorMsg.innerHTML = text;
             }
+        else{
+            if(number ==1 || number == 001 || number == 01){
+                console.log("number 1");
+                alert("Name: Bulbasaur \n" + " Type: Grass Poison");
+            }
+            if(number ==2 || number == 002 || number == 02){
+                console.log("number 2");
+                alert("Name: Ivysaur\n" + "Type: Grass Poison");
+             }
+            if(number ==3 || number == 003 || number == 03){
+                console.log("number 3");
+                alert("Name: Venusaur\n" + "Type: Grass Poison");
+            }
+            if(number ==4 || number == 004 || number == 04){
+                console.log("number 4");
+                alert("Name: Charmander\n" + "Type: Fire");
+            }
+            if(number ==5 || number == 005 || number == 05){
+                console.log("number 5");
+                alert("Name: Charmeleon\n" + "Type: Fire");
+            }
+            
         //alert("Searching Function 2");
         //return false;
     }
+}
 
     
 
