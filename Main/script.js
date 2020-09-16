@@ -3,15 +3,40 @@ function validation() {
       var name = document.getElementById("pokiName").value;
       var errorMsg = document.getElementById("error_message");
       var text;
+      var card_title = ["bulbasaur", "ivysaur" , "venusaur", "charmander type: fire", 
+      "charmeleon", "charzard", "squirtle", "wartortle", "blastoise", "caterpie", 
+      "metapod", "butterfree", "weedle", "kakuna", "beedrill", "pidgey", 
+      "pidgeotto", "pidgeot", "rattata", "raticate"];
+      var value;
+
       errorMsg.style.padding = "10px";
       if(name.length > 20 || !name.match(/^[A-Za-z]+$/)){
           console.log("checked");
           text = "Please Enter Valid Name";
           errorMsg.innerHTML = text;
           return false;
+         
       }
       else{
-          if(name == "Bulbasaur" || name== "bulbasaur" || name== "BULBASAUR"){
+        var index, value, result, inner;
+
+        for(index = 0; index<card_title.length;index++){
+          for(inner =1; inner<card_title[index].length+1;inner++){
+            value = card_title[index];
+            if(value.substring(inner,0) == "c"){
+              alert(value);
+            }
+          }
+        }
+
+        //   if(card_title.indexOf(name) > -1){
+        //        alert("name: " + card_title[card_title.indexOf(name)]) ;
+        //   }
+        //   if(name == 'b'){
+        //       alert("name: Bulbasaur  Type: Grass Poison\n" + "name: Blastoise  Type: water\n" + "name: Butterfree  Type: Bug flying\n" + "name: Beedrill  Type: Bug Poison");
+        //   }
+        }
+          /*if(name == "Bulbasaur" || name== "bulbasaur" || name== "BULBASAUR"){
               console.log("checked2");
               alert("Name: Bulbasaur \n" + " Type: Grass Poison");
           }
@@ -34,13 +59,13 @@ function validation() {
         if(name == "Charmeleon" || name== "CHARMELEON"|| name=="charmeleon"){
             console.log("checked6");
             alert("Name: Charmeleon\n" + "Type: Fire");
-        }
+        }*/
         
       }
      
      // alert("Searching...");
       //return false;
-    }
+    
 
 function validation_Number(){
     var number = document.getElementById("Number").value;
