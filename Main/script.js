@@ -6,12 +6,11 @@ function validation() {
       var unlist = document.getElementById("cards");
       var list = unlist.getElementsByTagName("li");
       var counter =0;
-    
-
       errorMsg.style.padding = "10px";
+      
       if(name.length > 20 || !name.match(/^[A-Za-z]+$/)){
           console.log("checked");
-          text = "Please Enter Valid Name";
+          text = "Please Enter Valid Name (less than 20 characters)";
           errorMsg.innerHTML = text;
           return false;
          
@@ -19,12 +18,11 @@ function validation() {
       else{
           for(let i=0; i<20;i++){
             var card_id = list[i].getElementsByClassName("card-title")[0];
-            var card_type1 = list1[i].getElementsByClassName("card-type")[0];
-            console.log(card_id);
+            var card_type1 = list[i].getElementsByClassName("card-type")[0];
             console.log(card_id.innerHTML.toLowerCase());
            // console.log(card_id.indexOf(name));
             if(card_id.innerHTML.toLowerCase().indexOf(name) >-1 &&counter <5){ //add counter
-                alert("Number:"+ card_id.innerHTML + "\n" + "Type:" + card_type1.innerHTML);
+                alert("Number "+ card_id.innerHTML + "\n" + "Type: " + card_type1.innerHTML);
                 counter++;
             }
             else{
@@ -61,7 +59,7 @@ function validation_Number(){
                 console.log(card_type.innerHTML);
                // console.log(card_id.indexOf(name));
                 if(card_id.innerHTML.toLowerCase().indexOf(number) >-1 && counter1 <5){ //add counter
-                    alert("Number:"+ card_id.innerHTML + "\n" + "Type:" + card_type.innerHTML);
+                    alert("Number:"+ card_id.innerHTML + "\n" + "Type: " + card_type.innerHTML);
                     counter1++;
                 }
                 else{
