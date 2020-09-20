@@ -61,6 +61,7 @@ function validation_Number(){
         if(isNaN(number) || number >20 || number <1 ){
             text = "Please Enter Valid PokiID";
             errorMsg.innerHTML = text;
+            return false;
             }
         else{
             for(let i=0; i<20;i++){
