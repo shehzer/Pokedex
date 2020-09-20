@@ -1,13 +1,17 @@
 function validation() {
+    //Load in value they enter in name search box
       var name = document.getElementById("pokiName").value;
       name = name.toLowerCase();
+      //load in error message
       var errorMsg = document.getElementById("error_message");
       var text;
+      //load in cards
       var unlist = document.getElementById("cards");
+      //load in all tags "li" within cards
       var list = unlist.getElementsByTagName("li");
       var counter =0;
       errorMsg.style.padding = "10px";
-      
+      //if name is greater than 20 characters or not A-Z (caps and non caps)
       if(name.length > 20 || !name.match(/^[A-Za-z]+$/)){
           console.log("checked");
           text = "Please Enter Valid Name (less than 20 characters)";
@@ -16,13 +20,18 @@ function validation() {
          
       }
       else{
+          //check all 20 cards and print out all cards that match string pattern
           for(let i=0; i<20;i++){
+            //load h2 headers
             var card_id = list[i].getElementsByClassName("card-title")[0];
-            var card_type1 = list[i].getElementsByClassName("card-type")[0];
+            //load card type
+            var card_type1 = list[i].getElementsByClassName("card-type")[0]; 
+            //load evolution stage
+            var evolution = list[i].getElementsByClassName("evolution")[0];
             console.log(card_id.innerHTML.toLowerCase());
-           // console.log(card_id.indexOf(name));
-            if(card_id.innerHTML.toLowerCase().indexOf(name) >-1 &&counter <5){ //add counter
-                alert("Number "+ card_id.innerHTML + "\n" + "Type: " + card_type1.innerHTML);
+            //if it matches the string entered and counter less than 5 print the card, type and evolution
+            if(card_id.innerHTML.toLowerCase().indexOf(name) >-1 &&counter <5){ 
+                alert("Number "+ card_id.innerHTML + "\n" + "Type: " + card_type1.innerHTML +"\n" + evolution.innerHTML);
                 counter++;
             }
             else{
@@ -39,27 +48,33 @@ function validation() {
     
 
 function validation_Number(){
+    //load in number that is entered
     var number = document.getElementById("Number").value;
+    //load error message
     var errorMsg = document.getElementById("error_message");
     var text;
-    var unlist1 = document.getElementById("cards");
-    var list1 = unlist1.getElementsByTagName("li");
+    var unlist1 = document.getElementById("cards"); //load in cards
+    var list1 = unlist1.getElementsByTagName("li"); // load in li headers under cards
     var counter1 =0;
-    errorMsg.style.padding = "10px";
+    errorMsg.style.padding = "10px"; 
+        //if its not a number or not between 1-20 print error
         if(isNaN(number) || number >20 || number <1 ){
             text = "Please Enter Valid PokiID";
             errorMsg.innerHTML = text;
             }
         else{
             for(let i=0; i<20;i++){
+                //load h2 headers
                 var card_id = list1[i].getElementsByClassName("card-title")[0];
-              //  console.log(card_id);
+                //load types
                 var card_type = list1[i].getElementsByClassName("card-type")[0];
+                //load evolution
+                var evolution = list1[i].getElementsByClassName("evolution")[0];
                 console.log(card_id.innerHTML.toLowerCase());
                 console.log(card_type.innerHTML);
-               // console.log(card_id.indexOf(name));
-                if(card_id.innerHTML.toLowerCase().indexOf(number) >-1 && counter1 <5){ //add counter
-                    alert("Number:"+ card_id.innerHTML + "\n" + "Type: " + card_type.innerHTML);
+                //if it matches string pattern entered, print the card, type and evolution
+                if(card_id.innerHTML.toLowerCase().indexOf(number) >-1 && counter1 <5){ 
+                    alert("Number:"+ card_id.innerHTML + "\n" + "Type: " + card_type.innerHTML +"\n" + evolution.innerHTML);
                     counter1++;
                 }
                 else{
@@ -83,52 +98,3 @@ function validation_Number(){
 
 
 
-/*const name = document.getElementById('name')
-const number = document.getElementById('number')
-const form = document.getElementById('form')
-const errorElement = document.getElementById('error')
-
-form.addEventListener('Search', (e) => {
-    let messages = []
-    if(name.value == ' ' || name.value == null ||name.length>20){
-        messages.push('Name must be less than 20 characters')
-    }
-
-    if(messages.length >0){
-        e.preventDefault()
-        errorElement.innerText = messages.join(', ')
-    }
-   
-})*/
-
-/*var index, value, inner;
-var counter =0;
-var count = 0;
-var unique;
-var myArr = new Array ();
-             //     if(card_title.indexOf(name) > -1){
-             //         alert("name: " + card_title[card_title.indexOf(name)]) ;
-             //    }
-            //keeps track of word
-        for(index = 0; index<card_title.length;index++){
-            //increments boundary
-            for(substring=0;substring<card_title[index].length;substring++){
-             //goes from boundary onwards ie b, bu,..bulbasaur then u,ul,ulb..ulbasaur,u
-                for(inner=1; inner<card_title[index].length+1;inner++){
-                value = card_title[index];
-                // console.log(value.substring(inner,substring));
-                    if(value.substring(inner,substring) ==name){
-                        myArr[counter] = value;
-                        counter++;
-                        // console.log(myArr);
-                        unique  = Array.from(new Set(myArr));
-                    
-                     }
-                                                        
-                }
-            }
-            
-        } 
-        for (var count = 0; count <= 4; count++) {
-            alert(unique[count]);
-          }*/
