@@ -24,6 +24,8 @@ function validation() {
           for(let i=0; i<20;i++){
             //load h2 headers
             var card_id = list[i].getElementsByClassName("card-title")[0];
+
+            console.log(card_id);
             //load card type
             var card_type1 = list[i].getElementsByClassName("card-type")[0]; 
             //load evolution stage
@@ -45,6 +47,7 @@ function validation() {
         }
     }
      
+     
     
 
 function validation_Number(){
@@ -60,7 +63,7 @@ function validation_Number(){
         //if its not a number or not between 1-20 print error
         if(isNaN(number) || number >20 || number <1 ){
             text = "Please Enter Valid PokiID";
-            errorMsg.innerHTML = text;
+            errorMsg.innerHTML = text; 
             return false;
             }
         else{
