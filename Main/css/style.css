@@ -125,5 +125,15 @@ body{
    
 }
 
+.characterList{
+    background-color: blanchedalmond;
+    margin: 0 auto;
+    font-family: rubik;
+    padding: 40px;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); 
+    grid-gap: 20px;
+}
+
 
 
