@@ -4,7 +4,8 @@ const unlist = document.getElementById("cards");
 //load in all tags "li" within cards
 const list = unlist.getElementsByTagName("li");
 var myDiv = document.getElementById("myDiv");
-
+var errorMsg = document.getElementById("error_message");
+var text;
 
 //stores dynamically typed string pattern
 searchBar.addEventListener('keyup', (e) => { 
