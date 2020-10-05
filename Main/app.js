@@ -6,10 +6,12 @@ const list = unlist.getElementsByTagName("li");
 var myDiv = document.getElementById("myDiv");
 
 
-
+//stores dynamically typed string pattern
 searchBar.addEventListener('keyup', (e) => { 
     var charactersList = document.getElementById('charactersList');
+    //reset it
     charactersList.innerHTML = " ";
+    //array to store filtered characters
     let filteredCharacters = []; 
     const searchString = e.target.value.toLowerCase();
     console.log (searchString);
@@ -29,14 +31,14 @@ searchBar.addEventListener('keyup', (e) => {
             }
         }
         console.log(filteredCharacters);
-        
+        //clone each filtered character and append it
         filteredCharacters.forEach((character) => {
             var cln = character.cloneNode(true);
             charactersList.appendChild(cln);
             
         });
     });
-
+    //do the same for number
     searchBar1.addEventListener('keyup', (e) => { 
         var charactersList = document.getElementById('charactersList');
         charactersList.innerHTML = " ";
@@ -59,7 +61,7 @@ searchBar.addEventListener('keyup', (e) => {
                 }
             }
             console.log(filteredCharacters);
-            
+            //clone it and append it
             filteredCharacters.forEach((character) => {
                 var cln = character.cloneNode(true);
                 charactersList.appendChild(cln);
