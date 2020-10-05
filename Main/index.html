@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang = "fr">
     <head>
             <title> Pokidex </title>
             <link rel = "stylesheet" type = "text/css" href = "css/style.css">
             <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+            <meta charset="UTF-8">
 
     </head>
     <body>
@@ -12,7 +13,7 @@
             <div id ="error_message"></div>
             
             
-            <form class="my-form" id="myForm" onsubmit="return validation()">
+            <form class="my-form">
                 <div class = "form-name">
                     <label>Name:</label>
                     <input type = "text" id="pokiName" placeholder="Enter Name">
@@ -20,7 +21,7 @@
                 </div>
             </form> 
             
-            <form class="my-form" id="myForm" onsubmit="return validation_Number()">
+            <form class="my-form">
                 <div class = "form-number">
                     <label> Number: </label>
                     <input 
@@ -48,147 +49,147 @@
         <div>
             <ul id="cards" class = Pokedex>
                     <li class = "card" >
-                        <img class="card-image" src = "Images/1.png"/>
+                        <img class="card-image" alt="image 1" src = "Images/1.png"/>
                         <h2 class ="card-title">1 Bulbasaur</h2>
                         <p class = "card-type" >Grass Poison</p>
                         <p class = "evolution" > Evolution Stage: 1</p>
                     </li>
 
                     <li class = "card">
-                        <img class="card-image" img src = "Images/2.png"/>
+                        <img class="card-image"  alt="image 2" src = "Images/2.png"/>
                         <h2 class ="card-title">2 Ivysaur</h2>
                         <p class = "card-type">Grass  Poison </p>
                         <p class = "evolution"> Evolution Stage: 2</p>
                     </li>
 
                     <li class = "card">
-                        <img src = "Images/3.png"/>
+                        <img alt="image 3" src = "Images/3.png"/>
                         <h2 class ="card-title">3 Venusaur</h2>
                         <p class = "card-type" >Grass  Poison </p>
                         <p class = "evolution"> Evolution Stage: 3</p>
                     </li>
 
                     <li class = "card">
-                        <img src = "Images/4.png"/>
+                        <img alt="image 4"  src = "Images/4.png"/>
                         <h2 class ="card-title">4 Charmander</h2>
                         <p class = "card-type" >Fire </p>
                         <p class = "evolution"> Evolution Stage: 1</p>
                     </li>
 
                     <li class = "card">
-                        <img src = "Images/5.png"/>
+                        <img alt="image 5" src = "Images/5.png"/>
                         <h2 class ="card-title">5 Charmeleon</h2>
                         <p class = "card-type" >Fire </p>
                         <p class = "evolution"> Evolution Stage: 2</p>
                     </li>
 
                     <li class = "card">
-                        <img src = "Images/6.png"/>
+                        <img alt="image 6" src = "Images/6.png"/>
                         <h2 class ="card-title">6 Charizard</h2>
                         <p class = "card-type" >Fire Flying </p>
                         <p class = "evolution"> Evolution Stage: 3</p>
                     </li>
                     
                     <li class = "card">
-                        <img src = "Images/7.png"/>
+                        <img alt="image 7" src = "Images/7.png"/>
                         <h2 class ="card-title">7 Squirtle</h2>
                         <p class = "card-type" >Water </p>
                         <p class = "evolution"> Evolution Stage: 1</p>
                     </li>
 
                     <li class = "card">
-                        <img src = "Images/8.png"/>
+                        <img alt="image 8" src = "Images/8.png"/>
                         <h2 class ="card-title">8 Wartortle</h2>
                         <p class = "card-type" >Water </p>
                         <p class = "evolution"> Evolution Stage: 2</p>
                     </li>
 
                     <li class = "card">
-                        <img src = "Images/9.png"/>
+                        <img alt="image 9" src = "Images/9.png"/>
                         <h2 class ="card-title">9 Blastoise</h2>
                         <p class = "card-type" >Water </p>
                         <p class = "evolution"> Evolution Stage: 3</p>
                     </li>
 
                     <li class = "card">
-                        <img src = "Images/10.png"/>
+                        <img alt="image 10" src = "Images/10.png"/>
                         <h2 class ="card-title">10 Caterpie</h2>
                         <p class = "card-type" >Bug </p>
                         <p class = "evolution"> Evolution Stage: 1</p>
                     </li>
 
                     <li class = "card">
-                        <img src = "Images/11.png"/>
+                        <img alt="image 11" src = "Images/11.png"/>
                         <h2 class ="card-title">11 Metapod</h2>
                         <p class = "card-type" >Bug </p>
                         <p class = "evolution"> Evolution Stage: 2</p>
                     </li>
 
                     <li class = "card">
-                        <img src = "Images/12.png"/>
+                        <img alt="image 12" src = "Images/12.png"/>
                         <h2 class ="card-title">12 Butterfree</h2>
                         <p class = "card-type" >Bug Flying </p>
                         <p class = "evolution"> Evolution Stage: 3</p>
                     </li>
 
                     <li class = "card">
-                        <img src = "Images/13.png"/>
+                        <img alt="image 13" src = "Images/13.png"/>
                         <h2 class ="card-title">13 Weedle</h2>
                         <p class = "card-type" >Bug Poison </p>
                         <p class = "evolution"> Evolution Stage: 1</p>
                     </li>
 
                     <li class = "card">
-                        <img src = "Images/14.png"/>
+                        <img alt="image 14" src = "Images/14.png"/>
                         <h2 class ="card-title">14 Kakuna</h2>
                         <p class = "card-type" >Bug Poison</p>
                         <p class = "evolution"> Evolution Stage: 2</p>
                     </li>
 
                     <li class = "card">
-                        <img src = "Images/15.png"/>
+                        <img alt="image 15" src = "Images/15.png"/>
                         <h2 class ="card-title">15 Beedrill</h2>
                         <p class = "card-type" >Bug Poison </p>
                         <p class = "evolution"> Evolution Stage: 3</p>
                     </li>
 
                     <li class = "card">
-                        <img src = "Images/16.png"/>
+                        <img alt="image 16"  src = "Images/16.png"/>
                         <h2 class ="card-title">16 Pidgey</h2>
                         <p class = "card-type" >Normal Flying </p>
                         <p class = "evolution"> Evolution Stage: 1</p>
                     </li>
 
                     <li class = "card">
-                        <img src = "Images/17.png"/>
+                        <img alt="image 17" src = "Images/17.png"/>
                         <h2 class ="card-title">17 Pidgeotto</h2>
                         <p class = "card-type" >Normal Flying </p>
                         <p class = "evolution"> Evolution Stage: 2</p>
                     </li>
 
                     <li class = "card">
-                        <img src = "Images/18.png"/>
+                        <img alt="image 18" src = "Images/18.png"/>
                         <h2 class ="card-title">18 Pidgeot</h2>
                         <p class = "card-type" >Normal Flying </p>
                         <p class = "evolution"> Evolution Stage: 3</p>
                     </li>
 
                     <li class = "card">
-                        <img src = "Images/19.png"/>
+                        <img alt="image 19" src = "Images/19.png"/>
                         <h2 class ="card-title">19 Rattata</h2>
                         <p class = "card-type" >Normal </p>
                         <p class = "evolution"> Evolution Stage: 1</p>
                     </li>
 
                     <li class = "card">
-                        <img class = "images" src = "Images/20.png"/>
+                        <img alt="image 20" class = "images" src = "Images/20.png"/>
                         <h2 class ="card-title">20 Raticate</h2>
                         <p class = "card-type" >Normal </p>
                         <p class = "evolution"> Evolution Stage: 2</p>
                     </li>
 
                     <li class = "card">
-                        <img src = "Images/Mystery.png"/>
+                        <img alt="image 21" src = "Images/Mystery.png"/>
                         <h2 class ="card-title">21 Mystery</h2>
                         <p class = "card-type" >Who's that Pokemon </p>
                     </li>
